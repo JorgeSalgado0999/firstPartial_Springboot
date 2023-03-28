@@ -1,0 +1,411 @@
+2023-03-27 16:12:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTS" not found (this database is empty); SQL statement:
+insert into products (product_id, description, name, price) values (default, ?, ?, ?) [42104-214]
+2023-03-27 16:24:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE UsersCarts (\000d\000a    user_id int NOT NULL,\000d\000a    product_id int NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE UsersCarts (
+    user_id int NOT NULL,
+    product_id int NOT NULL,
+) [42001-214]
+2023-03-27 16:26:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE UsersCarts (\000d\000a    FOREIGN KEY [*]user_id int NOT NULL REFERENCES Users(user_id),\000d\000a    FOREIGN KEY product_id int NOT NULL REFERENCES Products(product_id),\000d\000a)"; expected "("; SQL statement:
+CREATE TABLE UsersCarts (
+    FOREIGN KEY user_id int NOT NULL REFERENCES Users(user_id),
+    FOREIGN KEY product_id int NOT NULL REFERENCES Products(product_id),
+) [42001-214]
+2023-03-27 16:27:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE UsersCarts (\000d\000a    FOREIGN KEY [*]user_id int NOT NULL REFERENCES USERS(user_id),\000d\000a    FOREIGN KEY product_id int NOT NULL REFERENCES PRODUCTS(product_id),\000d\000a)"; expected "("; SQL statement:
+CREATE TABLE UsersCarts (
+    FOREIGN KEY user_id int NOT NULL REFERENCES USERS(user_id),
+    FOREIGN KEY product_id int NOT NULL REFERENCES PRODUCTS(product_id),
+) [42001-214]
+2023-03-27 16:28:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    FOREIGN KEY [*]user int NOT NULL REFERENCES USERS(user_id),\000d\000a    FOREIGN KEY product int NOT NULL REFERENCES PRODUCTS(product_id),\000d\000a)"; expected "("; SQL statement:
+CREATE TABLE Carts (
+    FOREIGN KEY user int NOT NULL REFERENCES USERS(user_id),
+    FOREIGN KEY product int NOT NULL REFERENCES PRODUCTS(product_id),
+) [42001-214]
+2023-03-27 16:29:47 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP TABLE [*]IF EXITS PRODUCTS"; expected "identifier"; SQL statement:
+DROP TABLE IF EXITS PRODUCTS [42001-214]
+2023-03-27 16:29:47 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP TABLE [*]IF EXITS USERS"; expected "identifier"; SQL statement:
+DROP TABLE IF EXITS USERS [42001-214]
+2023-03-27 16:30:02 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP [*]PRODUCTS"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP PRODUCTS [42001-214]
+2023-03-27 16:30:02 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP [*]USERS"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP USERS [42001-214]
+2023-03-27 16:30:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Products (\000d\000a    PRIMARY KEY [*]product_id int NOT NULL AUTO_INCREMENT,\000d\000a    name varchar(255),\000d\000a    description varchar(255),\000d\000a    price float\000d\000a)"; expected "HASH, ("; SQL statement:
+CREATE TABLE Products (
+    PRIMARY KEY product_id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    description varchar(255),
+    price float
+) [42001-214]
+2023-03-27 16:32:12 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCTS" not found; SQL statement:
+DROP TABLE PRODUCTS [42102-214]
+2023-03-27 16:32:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    [*]user int NOT NULL FOREIGN KEY REFERENCES USERS(user_id),\000d\000a    product int NOT NULL FOREIGN KEY REFERENCES PRODUCTS(product_id),\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    user int NOT NULL FOREIGN KEY REFERENCES USERS(user_id),
+    product int NOT NULL FOREIGN KEY REFERENCES PRODUCTS(product_id),
+) [42001-214]
+2023-03-27 16:38:20 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int NOT NULL FOREIGN KEY REFERENCES USERS(user_id),\000d\000a    product int NOT NULL FOREIGN KEY REFERENCES PRODUCTS(product_id),\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL FOREIGN KEY REFERENCES USERS(user_id),
+    product int NOT NULL FOREIGN KEY REFERENCES PRODUCTS(product_id),
+) [42001-214]
+2023-03-27 16:41:23 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int NOT NULL,\000d\000a    product int NOT NULL,\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL,
+    product int NOT NULL,
+) [42001-214]
+2023-03-27 16:42:11 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int NOT NULL,\000d\000a    product int NOT NULL,\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL,
+    product int NOT NULL,
+) [42001-214]
+2023-03-27 16:42:51 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int NOT NULL,\000d\000a    product int NOT NULL\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL,
+    product int NOT NULL
+) [42001-214]
+2023-03-27 16:42:55 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int NOT NULL,\000d\000a    product int NOT NULL\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL,
+    product int NOT NULL
+) [42001-214]
+2023-03-27 16:43:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:43:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:43:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:43:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:43:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:02 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:44:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE POPOS (\000d\000a     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE POPOS (
+     user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+) [42001-214]
+2023-03-27 16:45:37 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int NOT NULL,\000d\000a    items int\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL,
+    items int
+) [42001-214]
+2023-03-27 16:45:51 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int,\000d\000a    items int\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int,
+    items int
+) [42001-214]
+2023-03-27 16:46:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user int NOT NULL,\000d\000a    items int\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user int NOT NULL,
+    items int
+) [42001-214]
+2023-03-27 16:48:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user INT NOT NULL,\000d\000a    items INT\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user INT NOT NULL,
+    items INT
+) [42001-214]
+2023-03-27 16:48:06 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user INT NOT NULL,\000d\000a    items INT\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user INT NOT NULL,
+    items INT
+) [42001-214]
+2023-03-27 16:48:23 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    [*]user varchar(255) NOT NULL,\000d\000a    items INT\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user varchar(255) NOT NULL,
+    items INT
+) [42001-214]
+2023-03-27 16:50:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    userId INT NOT NULL,\000d\000a    productId INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    userId INT NOT NULL,
+    productId INT NOT NULL,
+) [42001-214]
+2023-03-27 16:50:52 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    user_ref INT NOT NULL,\000d\000a    product_ref INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_ref INT NOT NULL,
+    product_ref INT NOT NULL,
+) [42001-214]
+2023-03-27 16:50:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    user_ref INT NOT NULL,\000d\000a    product_ref INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_ref INT NOT NULL,
+    product_ref INT NOT NULL,
+) [42001-214]
+2023-03-27 16:50:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    user_ref INT NOT NULL,\000d\000a    product_ref INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_ref INT NOT NULL,
+    product_ref INT NOT NULL,
+) [42001-214]
+2023-03-27 16:50:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    user_ref INT NOT NULL,\000d\000a    product_ref INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_ref INT NOT NULL,
+    product_ref INT NOT NULL,
+) [42001-214]
+2023-03-27 16:51:15 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    ref_user INT NOT NULL,\000d\000a    ref_product INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ref_user INT NOT NULL,
+    ref_product INT NOT NULL,
+) [42001-214]
+2023-03-27 16:51:16 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    ref_user INT NOT NULL,\000d\000a    ref_product INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ref_user INT NOT NULL,
+    ref_product INT NOT NULL,
+) [42001-214]
+2023-03-27 16:51:32 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    usr INT NOT NULL,\000d\000a    prdct INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    usr INT NOT NULL,
+    prdct INT NOT NULL,
+) [42001-214]
+2023-03-27 16:52:06 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    limon INT NOT NULL,\000d\000a    sal INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    limon INT NOT NULL,
+    sal INT NOT NULL,
+) [42001-214]
+2023-03-27 16:52:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    limon INT NOT NULL,\000d\000a    sal INT NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    limon INT NOT NULL,
+    sal INT NOT NULL,
+) [42001-214]
+2023-03-27 16:52:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE Carts (\000d\000a    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a    limon varchar(255) NOT NULL,\000d\000a    sal varchar(255) NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Carts (
+    cart_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    limon varchar(255) NOT NULL,
+    sal varchar(255) NOT NULL,
+) [42001-214]
+2023-03-27 16:53:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ATLTER TABLE CARTS\000d\000a    ADD FOREIGN KEY (user_ref) REFERENCES USERS(user_id),\000d\000a    ADD FOREIGN KEY (product_ref) REFERENCES PRODUCTS(product_id)"; expected "ALTER, ANALYZE"; SQL statement:
+ATLTER TABLE CARTS
+    ADD FOREIGN KEY (user_ref) REFERENCES USERS(user_id),
+    ADD FOREIGN KEY (product_ref) REFERENCES PRODUCTS(product_id) [42001-214]
+2023-03-27 17:00:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Jorge Salgado" not found; SQL statement:
+INSERT INTO USERS (name, items) VALUES ("Jorge Salgado", 0) [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:300)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-03-27 17:00:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Fernanda Ramirez" not found; SQL statement:
+INSERT INTO USERS (name, items) VALUES ("Fernanda Ramirez", 0) [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:300)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-03-27 17:00:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS (name, items) VALUES (Jorge [*]Salgado, 0)"; expected "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO USERS (name, items) VALUES (Jorge Salgado, 0) [42001-214]
+2023-03-27 17:00:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS (name, items) VALUES (Fernanda [*]Ramirez, 0)"; expected "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, ,, )"; SQL statement:
+INSERT INTO USERS (name, items) VALUES (Fernanda Ramirez, 0) [42001-214]

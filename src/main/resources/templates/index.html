@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	lang="en"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/GlobalStyles.css" />
+		<title>Tienda</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<!-- intro -->
+			<div class="row">
+				<div class="col-12">
+					<h1>Primer Parcial</h1>
+				</div>
+				<div class="col-12 col-md-6">
+					<p>Alumno: <span th:text="${student}"></span></p>
+				</div>
+				<div class="col-12 col-md-6">
+					<p>Matricula: <span th:text="${studentId}"></span></p>
+				</div>
+			</div>
+
+			<!-- productos -->
+			<div class="row">
+				<div class="col-12">
+					<h2>Productos disponibles</h2>
+				</div>
+			</div>
+			<div class="row" id="productsContainer">
+				<!-- inicia card container -->
+				<div class="col-sm-6">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Nombre Producto</h5>
+							<p class="card-text">Descripción Producto</p>
+							<p class="card-text">Precio Producto</p>
+							<button class="btn btn-primary">Agregar Carrito</button>
+						</div>
+					</div>
+				</div>
+				<!-- termina card container -->
+			</div>
+		</div>
+
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>

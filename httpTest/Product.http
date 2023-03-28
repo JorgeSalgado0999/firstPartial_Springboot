@@ -1,0 +1,23 @@
+###
+GET http://localhost:8080/api/product
+
+
+###
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "name": "Celular",
+  "price": 100,
+  "description": "Iphone 13 Reacondicionado"
+}
+
+###
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "name": "Control xbox",
+  "price": 100,
+  "description": "Control compayible con todas las consolas del mundo"
+}
