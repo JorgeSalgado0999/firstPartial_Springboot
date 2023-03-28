@@ -20,6 +20,6 @@ CREATE TABLE Carts (
     product_ref int,
     user_ref int
 );
-ATLTER TABLE CARTS
+ALTER TABLE CARTS
     ADD FOREIGN KEY (user_ref) REFERENCES USERS(user_id),
     ADD FOREIGN KEY (product_ref) REFERENCES PRODUCTS(product_id);

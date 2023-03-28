@@ -1,6 +1,22 @@
 const URL = "http://localhost:8080/api/product";
 const productsContainer = document.getElementById("productsContainer");
 
+function addToCart(productId) {
+	console.log(productId);
+	options = {
+		method: "POST",
+		headers: {"Content-Type": "application/json"},
+		body: JSON.stringify({productId: productId}),
+	};
+
+	fetch(URL, options)
+		.then((response) => response.json())
+		.then((json) => {
+			console.log(json);
+			products = json;
+		});
+}
+
 function showProducts() {
 	let products;
 
@@ -20,7 +36,7 @@ function showProducts() {
           <h5 class="card-title">${product.name}</h5>
           <p class="card-text">${product.description}</p>
           <p class="card-text">Precio Producto</p>
-          <button class="btn btn-primary">Agregar Carrito</button>
+          <button class="btn btn-primary" onClick="addToCart(${product.productId})">Agregar Carrito</button>
         </div>
       </div>
     `;

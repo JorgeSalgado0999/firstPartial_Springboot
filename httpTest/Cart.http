@@ -1,0 +1,21 @@
+###
+GET http://localhost:8080/api/cart
+
+
+###
+POST http://localhost:8080/api/cart
+Content-Type: application/json
+
+{
+  "product_ref": 1,
+  "user_ref": 1
+}
+
+###
+POST http://localhost:8080/api/cart
+Content-Type: application/json
+
+{
+  "product_ref": 2,
+  "user_ref": 1
+}

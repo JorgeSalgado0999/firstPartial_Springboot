@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exam.bl.CartMethods;
+import com.exam.domain.Cart;
 import com.exam.domain.Product;
 import com.exam.domain.User;
 
@@ -28,6 +29,8 @@ public class ProductController {
   public Iterable<Product> getAllProducts() {
     return service.getAllProducts();
   }
+
+
   
   @PostMapping("/api/user")
   public User createUser(@RequestBody User user) {
@@ -36,5 +39,12 @@ public class ProductController {
     return service.createUser(user);
   }
   
+
+  @PostMapping("/api/cart")
+  public Cart createCart(@RequestBody Cart cart) {
+    System.out.println("lo que llega primero: " + cart.toString());
+
+    return service.createCart(cart);
+  }
 
 }
